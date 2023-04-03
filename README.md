@@ -4,7 +4,7 @@
 - [AIoT Converea](https://energetic-bucket-84a.notion.site/AIoT-Converea-3c3d374c2acc4640a9c6ac2abf5c2cbe)
 
 #### Schedule
-- 2022-11 ~ 2023-12
+- 2022-11 ~ 2022-12
 
 #### Contents
 - GPIO를 활용한 input, output 가능 여부 확인
