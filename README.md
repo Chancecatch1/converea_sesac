@@ -1,20 +1,45 @@
-#### AIoT Converea(Automatic plant cultivation with AI) at SeSac
+# Converea - AIoT Automatic Plant Cultivation
 
-#### Title
-- [AIoT Converea](https://energetic-bucket-84a.notion.site/AIoT-Converea-3c3d374c2acc4640a9c6ac2abf5c2cbe)
+> AI and IoT integrated automatic plant cultivation system
 
-#### Schedule
-- 2022-11 ~ 2022-12
+## Overview
 
-#### Contents
-- GPIO를 활용한 input, output 가능 여부 확인
-- 온도, 습도, ph, 수위, 탁도 등의 sensor 정보 업데이트
-- raspberry로 받은 sensor정보 Firestore DB에 업로드
-- 식물의 성장도를 AI모델로 학습
-- jetson nano에서 카메라 프레임을 열어, 식물의 성장도 계산
-- jetson nano에 수집된 sensor정보 및 성장도를 Firestore DB에 업로드
+Converea is a smart plant cultivation system developed during the SeSac AIoT program. Uses Raspberry Pi and Jetson Nano to collect sensor data and measure plant growth with AI models.
 
-#### Directory
-- raspberry: 각종 sensor 및 firestore DB
-- jetsonnano: socket통신, camera 및 firestore DB
-- sensor: 온도, fanning, ph, water_level, pump etc..
+## Key Features
+
+- **Sensor Monitoring**: Temperature, humidity, pH, water level, turbidity
+- **AI Growth Analysis**: Jetson Nano camera-based plant growth measurement
+- **Cloud Integration**: Real-time Firestore DB upload
+- **Automatic Control**: Pump, fan automatic control
+
+## Architecture
+
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│ Raspberry Pi │───│ Jetson Nano │───│  Firestore  │
+│  (Sensors)   │    │  (AI/Camera) │    │    (DB)     │
+└─────────────┘    └─────────────┘    └─────────────┘
+```
+
+## Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| Hardware | Raspberry Pi, Jetson Nano |
+| Sensors | DHT11, pH sensor, water level, turbidity |
+| AI | TensorFlow, OpenCV |
+| Database | Firebase Firestore |
+
+## Project Structure
+
+```
+converea_sesac/
+├── raspberry/      # Raspberry Pi code
+├── jetsonnano/     # Jetson Nano code
+└── sensor/         # Individual sensor modules
+```
+
+## Period
+
+Nov - Dec 2022 (SeSac AIoT Program)
